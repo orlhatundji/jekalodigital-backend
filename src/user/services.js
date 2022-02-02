@@ -4,7 +4,6 @@ import UserModel from './model.js'
 
 class UserServices {
   static async create(req, res) {
-    console.log(req.body)
     const {
       first_name, last_name, username, date_of_birth
     } = req.body

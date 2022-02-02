@@ -37,16 +37,6 @@ app.set('port', port)
 // import routes into application
 app.use(routes)
 
-// cors config
-// app.use(cors({
-//   origin: '*',
-//   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-//   credentials: true,
-//   preflightContinue: false,
-//   optionSuccessStatus:200,
-//   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-// }))
-
 app.use((error, req, res, next) => {
   console.log(error)
   handleResponse(res, 400, error.message, error)
